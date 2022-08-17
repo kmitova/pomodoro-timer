@@ -14,19 +14,53 @@
   <body>
     <h1>Pomodoro Timer</h1>
     <main class="container">
-      <div class="set-time">
-        <label for="time">Enter minutes:</label>
-        <input type="number" id="inputMinutes" />
-      </div>
-      <div class="timer">
-        <div class="spans">
-          <span class="minutes">00</span>
-          <span class="divider">:</span>
-          <span class="seconds">00</span>
+      <div class="work-container">
+        <h2>Work time</h2>
+        <div class="work-timer">
+          <div class="set-time">
+            <label for="time">Enter minutes:</label>
+            <input type="number" id="inputMinutes" />
+          </div>
+          <div class="timer">
+            <div class="spans">
+              <span class="minutes" id="work-minutes">00</span>
+              <span class="divider">:</span>
+              <span class="seconds" id="work-seconds">00</span>
+            </div>
+            <div class="buttons">
+              <button class="button-start-timer" id="start-work-btn">
+                Start Timer
+              </button>
+              <button class="button-pause-timer" id="pause-work-btn">
+                Pause Timer
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="buttons">
-          <button class="button-start-timer">Start Timer</button>
-          <button class="button-pause-timer">Pause Timer</button>
+      </div>
+
+      <div class="break-container">
+        <h2>Break time</h2>
+        <div class="break-timer">
+          <div class="set-time">
+            <label for="time">Enter minutes:</label>
+            <input type="number" id="inputMinutesBreak" />
+          </div>
+          <div class="timer">
+            <div class="spans">
+              <span class="minutes" id="minutes-break">00</span>
+              <span class="divider">:</span>
+              <span class="seconds" id="seconds-break">00</span>
+            </div>
+            <div class="buttons">
+              <button class="button-start-timer" id="start-break-btn">
+                Start Timer
+              </button>
+              <button class="button-pause-timer" id="pause-break-btn">
+                Pause Timer
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </main>
