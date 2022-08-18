@@ -1,0 +1,8 @@
+1. if one (work or break) is clicked, the other is not visible
+
+2. before minutes are entered, visibility of timer is none
+
+3. when minutes are entered, and the mouse is moved away from the input field, the minutes are automatically set in the timer span
+
+OUTLINE:
+1.work timer first
