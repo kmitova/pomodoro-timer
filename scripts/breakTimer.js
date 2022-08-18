@@ -1,11 +1,11 @@
-export default class WorkTimer {
+export default class BreakTimer {
   constructor(root) {
-    root.innerHTML = WorkTimer.getHTML();
+    root.innerHTML = BreakTimer.getHTML();
 
     this.el = {
-      minutes: root.querySelector("#work-minutes"),
-      seconds: root.querySelector("#work-seconds"),
-      controlBtn: root.querySelector("#start-work-btn"),
+      minutes: root.querySelector("#minutes-break"),
+      seconds: root.querySelector("#seconds-break"),
+      controlBtn: root.querySelector("#start-break-btn"),
     };
 
     this.interval = null;
@@ -13,7 +13,7 @@ export default class WorkTimer {
 
     this.el.controlBtn.addEventListener("click", () => {
       if (this.interval === null) {
-        const inputMinutes = document.getElementById("inputMinutes").value;
+        const inputMinutes = document.getElementById("inputMinutesBreak").value;
         console.log(inputMinutes);
         if (inputMinutes < 60) {
           this.stop();
@@ -22,7 +22,9 @@ export default class WorkTimer {
         }
         this.start();
       } else {
+        // this.remainingSeconds = inputMinutes * 60;
         this.stop();
+        // this.remainingSeconds = inputMinutes * 60;
       }
     });
   }
@@ -71,25 +73,26 @@ export default class WorkTimer {
 
   static getHTML() {
     return `
-    <h2 id="work-time-title">Work time</h2>
-        <div class="work-timer">
+    <h2 id="break-time-title">Break time</h2>
+        <div class="break-timer">
           <div class="set-time">
             <label for="time">Enter minutes:</label>
-            <input type="number" id="inputMinutes" value="25" />
+            <input type="number" id="inputMinutesBreak" value="5" />
           </div>
           <div class="timer">
             <div class="spans">
-              <span class="minutes" id="work-minutes">00</span>
+              <span class="minutes" id="minutes-break">00</span>
               <span class="divider">:</span>
-              <span class="seconds" id="work-seconds">00</span>
+              <span class="seconds" id="seconds-break">00</span>
             </div>
             <div class="buttons">
-              <button class="button-start-timer" id="start-work-btn">
+              <button class="button-start-timer" id="start-break-btn">
                 Start Timer
               </button>
               
             </div>
           </div>
-        </div>`;
+        </div>
+    `;
   }
 }
