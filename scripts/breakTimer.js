@@ -73,8 +73,7 @@ export default class BreakTimer {
 
   static getHTML() {
     return `
-    <h2 id="break-time-title">Break time</h2>
-        <div class="break-timer">
+        
           <div class="set-time">
             <label for="time">Enter minutes:</label>
             <input type="number" id="inputMinutesBreak" value="5" />
@@ -92,7 +91,7 @@ export default class BreakTimer {
               
             </div>
           </div>
-        </div>
+        
     `;
   }
 }

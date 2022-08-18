@@ -71,8 +71,7 @@ export default class WorkTimer {
 
   static getHTML() {
     return `
-    <h2 id="work-time-title">Work time</h2>
-        <div class="work-timer">
+        
           <div class="set-time">
             <label for="time">Enter minutes:</label>
             <input type="number" id="inputMinutes" value="25" />
@@ -89,7 +88,6 @@ export default class WorkTimer {
               </button>
               
             </div>
-          </div>
-        </div>`;
+          </div>`;
   }
 }
