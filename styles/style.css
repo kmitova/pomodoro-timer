@@ -7,3 +7,7 @@ main {
 .work-timer, .break-timer {
   border: 1px solid black
 }
+
+.hidden {
+  display: none;
+}
