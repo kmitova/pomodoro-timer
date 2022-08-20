@@ -15,7 +15,6 @@ export default class BreakTimer {
       if (this.interval === null) {
         const inputMinutes = document.getElementById("minutes-break").value;
         const inputSeconds = document.getElementById("seconds-break").value;
-        console.log(inputMinutes);
         if (inputMinutes < 60) {
           this.stop();
           this.remainingSeconds = inputMinutes * 60 + Number(inputSeconds);
@@ -23,9 +22,7 @@ export default class BreakTimer {
         }
         this.start();
       } else {
-        // this.remainingSeconds = inputMinutes * 60;
         this.stop();
-        // this.remainingSeconds = inputMinutes * 60;
       }
     });
   }
@@ -74,14 +71,11 @@ export default class BreakTimer {
 
   static getHTML() {
     return `
-        
-          <div class="set-time">
-            <label for="time">Enter minutes:</label>
-            <input type="number" id="inputMinutesBreak" value="5" />
-          </div>
           <div class="timer">
-            <div class="spans">
-              <input class="minutes" id="minutes-break" placeholder="00"/>
+            <div class="set-time">
+            <label for="time">Enter minutes:</label>
+          </div><div class="spans">
+              <input class="minutes" id="minutes-break" placeholder="5"/>
               <span class="divider">:</span>
               <input class="seconds" id="seconds-break" placeholder="00"/>
             </div>
@@ -92,7 +86,6 @@ export default class BreakTimer {
               
             </div>
           </div>
-        
     `;
   }
 }
