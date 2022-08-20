@@ -13,11 +13,15 @@ export default class WorkTimer {
 
     this.el.controlBtn.addEventListener("click", () => {
       if (this.interval === null) {
-        const inputMinutes = document.getElementById("inputMinutes").value;
+        const inputMinutes = document.getElementById("work-minutes").value;
         console.log(inputMinutes);
+        const inputSeconds = document.getElementById("work-seconds").value;
+        console.log(inputSeconds);
         if (inputMinutes < 60) {
           this.stop();
-          this.remainingSeconds = inputMinutes * 60;
+          this.remainingSeconds = inputMinutes * 60 + Number(inputSeconds);
+          console.log(this.remainingSeconds);
+          console.log(this.el.minutes.value);
           this.updateInterfaceTime();
         }
         this.start();
@@ -31,8 +35,8 @@ export default class WorkTimer {
     const minutes = Math.floor(this.remainingSeconds / 60);
     const seconds = this.remainingSeconds % 60;
 
-    this.el.minutes.textContent = minutes.toString().padStart(2, "0");
-    this.el.seconds.textContent = seconds.toString().padStart(2, "0");
+    this.el.minutes.value = minutes.toString().padStart(2, "0");
+    this.el.seconds.value = seconds.toString().padStart(2, "0");
   }
 
   updateInterfaceControls() {
@@ -78,9 +82,9 @@ export default class WorkTimer {
           </div>
           <div class="timer">
             <div class="spans">
-              <span class="minutes" id="work-minutes">00</span>
+              <input class="minutes" id="work-minutes" placeholder="00"/>
               <span class="divider">:</span>
-              <span class="seconds" id="work-seconds">00</span>
+              <input class="seconds" id="work-seconds" placeholder="00"/>
             </div>
             <div class="buttons">
               <button class="button-start-timer" id="start-work-btn">

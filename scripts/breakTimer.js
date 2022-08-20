@@ -13,11 +13,12 @@ export default class BreakTimer {
 
     this.el.controlBtn.addEventListener("click", () => {
       if (this.interval === null) {
-        const inputMinutes = document.getElementById("inputMinutesBreak").value;
+        const inputMinutes = document.getElementById("minutes-break").value;
+        const inputSeconds = document.getElementById("seconds-break").value;
         console.log(inputMinutes);
         if (inputMinutes < 60) {
           this.stop();
-          this.remainingSeconds = inputMinutes * 60;
+          this.remainingSeconds = inputMinutes * 60 + Number(inputSeconds);
           this.updateInterfaceTime();
         }
         this.start();
@@ -33,8 +34,8 @@ export default class BreakTimer {
     const minutes = Math.floor(this.remainingSeconds / 60);
     const seconds = this.remainingSeconds % 60;
 
-    this.el.minutes.textContent = minutes.toString().padStart(2, "0");
-    this.el.seconds.textContent = seconds.toString().padStart(2, "0");
+    this.el.minutes.value = minutes.toString().padStart(2, "0");
+    this.el.seconds.value = seconds.toString().padStart(2, "0");
   }
 
   updateInterfaceControls() {
@@ -80,9 +81,9 @@ export default class BreakTimer {
           </div>
           <div class="timer">
             <div class="spans">
-              <span class="minutes" id="minutes-break">00</span>
+              <input class="minutes" id="minutes-break" placeholder="00"/>
               <span class="divider">:</span>
-              <span class="seconds" id="seconds-break">00</span>
+              <input class="seconds" id="seconds-break" placeholder="00"/>
             </div>
             <div class="buttons">
               <button class="button-start-timer" id="start-break-btn">
