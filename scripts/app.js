@@ -17,6 +17,9 @@ breakSectionDisplay.addEventListener("click", loadBreakTimer);
 function loadWorkTimer() {
   new WorkTimer(document.querySelector(".work-timer"));
   workTimer.style.display = "block";
+  workTimer.classList.add("is-visible");
+
+  breakTimer.classList.remove("is-visible");
   breakTimer.style.display = "none";
 }
 
@@ -24,6 +27,9 @@ function loadBreakTimer() {
   new BreakTimer(document.querySelector(".break-timer"));
   breakTimer.style.display = "block";
   workTimer.style.display = "none";
+  breakTimer.classList.add("is-visible");
+
+  workTimer.classList.remove("is-visible");
 }
 
 new WorkTimer(document.querySelector(".work-timer"));

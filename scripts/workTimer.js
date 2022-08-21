@@ -76,9 +76,9 @@ export default class WorkTimer {
             <label for="time">Enter minutes:</label>
             </div>
           <div class="spans">
-              <input class="minutes" id="work-minutes" placeholder="25"/>
+              <input class="minutes" id="work-minutes" value="25"/>
               <span class="divider">:</span>
-              <input class="seconds" id="work-seconds" placeholder="00"/>
+              <input class="seconds" id="work-seconds" value="00"/>
             </div>
             <div class="buttons">
               <button class="button-start-timer" id="start-work-btn">

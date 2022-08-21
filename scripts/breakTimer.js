@@ -75,9 +75,9 @@ export default class BreakTimer {
             <div class="set-time">
             <label for="time">Enter minutes:</label>
           </div><div class="spans">
-              <input class="minutes" id="minutes-break" placeholder="5"/>
+              <input class="minutes" id="minutes-break" value="5"/>
               <span class="divider">:</span>
-              <input class="seconds" id="seconds-break" placeholder="00"/>
+              <input class="seconds" id="seconds-break" value="00"/>
             </div>
             <div class="buttons">
               <button class="button-start-timer" id="start-break-btn">
