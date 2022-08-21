@@ -6,34 +6,25 @@ const breakSectionDisplay = document.getElementById("break-time-title");
 const workTimer = document.querySelector(".work-timer");
 const breakTimer = document.querySelector(".break-timer");
 
-// window.onload = () => {
-//   loadWorkTimer();
-// };
+window.onload = () => {
+  loadWorkTimer();
+};
 
-// document.querySelector("h1").addEventListener("click", console.log("hi"));
-// workSectionDisplay.addEventListener("click", console.log("new test"));
+workSectionDisplay.addEventListener("click", loadWorkTimer);
 
-// workSectionDisplay.addEventListener("click", console.log("work"));
+breakSectionDisplay.addEventListener("click", loadBreakTimer);
 
-// breakSectionDisplay.addEventListener("click", console.log("break"));
+function loadWorkTimer() {
+  new WorkTimer(document.querySelector(".work-timer"));
+  workTimer.style.display = "block";
+  breakTimer.style.display = "none";
+}
 
-// function loadWorkTimer() {
-//   new WorkTimer(document.querySelector(".work-timer"));
-//   workTimer.style.display = "block";
-//   breakTimer.style.display = "none";
-// }
-
-// function loadBreakTimer() {
-//   new BreakTimer(document.querySelector(".break-timer"));
-//   breakTimer.style.display = "block";
-//   workTimer.style.display = "none";
-// }
+function loadBreakTimer() {
+  new BreakTimer(document.querySelector(".break-timer"));
+  breakTimer.style.display = "block";
+  workTimer.style.display = "none";
+}
 
 new WorkTimer(document.querySelector(".work-timer"));
 new BreakTimer(document.querySelector(".break-timer"));
-
-const button = document.getElementById("btn");
-
-button.addEventListener("click", (event) => {
-  console.log("clicked");
-});
