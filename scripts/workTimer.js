@@ -68,10 +68,16 @@ export default class WorkTimer {
   }
 
   addTomato() {
+    const tomatoesDiv = document.getElementsByClassName("tomatoes")[0];
+    tomatoesDiv.style.display = "block";
     const tomatoNum = document.getElementById("tomatoes-number");
     let currentTomatoes = Number(tomatoNum.textContent);
     let updatedTomatoes = currentTomatoes + 1;
     tomatoNum.textContent = updatedTomatoes;
+    const tomatoContainer = document.getElementById("tomato-img-container");
+    const tomatoImg = document.createElement("img");
+    tomatoImg.src = "./media/tomato.png";
+    tomatoContainer.appendChild(tomatoImg);
   }
 
   stop() {
