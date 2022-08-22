@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 
@@ -31,7 +34,7 @@ main {
   gap: 20px; 
   margin: 0 auto;
   justify-content: center;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 
 label {
@@ -53,9 +56,10 @@ h3, button, input {
   cursor: pointer;
 }
 
-h1 {
+h1, h3, h4 {
   text-align: center;
 }
+
 
 button {
   border: none;
@@ -65,5 +69,27 @@ button {
   font-size: 1rem;
   display: block;
   margin: 1em auto;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
 
+}
+
+input {
+  color: red;
+  padding: .2em;
+  font-size: 4rem;
+  width: 1.5em;
+  text-align: center;
+  border: none;
+  background-color: #dcdbd1;
+  border-radius: 15px;
+  margin-top: .2em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: 700;
+}
+
+.divider {
+  font-size: 3rem;
+  text-align: center;
+  margin: auto 0;
 }

@@ -37,11 +37,11 @@ export default class BreakTimer {
 
   updateInterfaceControls() {
     if (this.interval === null) {
-      this.el.controlBtn.textContent = "Start Timer";
+      this.el.controlBtn.textContent = "Start";
       this.el.controlBtn.classList.add(".start-timer-clicked");
       this.el.controlBtn.classList.remove(".stop-timer-clicked");
     } else {
-      this.el.controlBtn.textContent = "Reset Timer";
+      this.el.controlBtn.textContent = "Reset";
       this.el.controlBtn.classList.remove(".start-timer-clicked");
       this.el.controlBtn.classList.add(".stop-timer-clicked");
     }
@@ -84,7 +84,7 @@ export default class BreakTimer {
             </div>
             <div class="buttons">
               <button class="button-start-timer" id="start-break-btn">
-                Start Timer
+                Start
               </button>
               
             </div>
