@@ -54,7 +54,10 @@ export default class BreakTimer {
     this.interval = setInterval(() => {
       this.remainingSeconds--;
       this.updateInterfaceTime();
-
+      if (this.remainingSeconds <= 10) {
+        const sound = document.getElementById("countdown-sound");
+        sound.play();
+      }
       if (this.remainingSeconds === 0) {
         this.stop();
       }
