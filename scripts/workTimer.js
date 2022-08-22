@@ -11,6 +11,8 @@ export default class WorkTimer {
     this.interval = null;
     this.remainingSeconds = 0;
 
+    this.tomatoesGrown = 0;
+
     this.el.controlBtn.addEventListener("click", () => {
       if (this.interval === null) {
         const inputMinutes = document.getElementById("work-minutes").value;
@@ -73,11 +75,32 @@ export default class WorkTimer {
     const tomatoNum = document.getElementById("tomatoes-number");
     let currentTomatoes = Number(tomatoNum.textContent);
     let updatedTomatoes = currentTomatoes + 1;
-    tomatoNum.textContent = updatedTomatoes;
+    this.tomatoesGrown = updatedTomatoes;
+    const basket = document.createElement("img");
+    basket.src = "./media/basket-tomatoes/basket.jpg";
     const tomatoContainer = document.getElementById("tomato-img-container");
+    tomatoContainer.innerHTML = "";
     const tomatoImg = document.createElement("img");
     tomatoImg.src = "./media/tomato.png";
-    tomatoContainer.appendChild(tomatoImg);
+    tomatoNum.textContent = this.tomatoesGrown;
+    if (this.tomatoesGrown >= 4) {
+      let baskets = Math.floor(updatedTomatoes / 3);
+      // let remaining = this.tomatoesGrown - baskets * 3;
+      let remaining = this.tomatoesGrown % 3;
+      console.log("baskets: " + baskets);
+      console.log("remaining " + remaining);
+      for (let index = 0; index < baskets; index++) {
+        tomatoContainer.appendChild(basket.cloneNode(true));
+      }
+      for (let index = 0; index < remaining; index++) {
+        console.log(index);
+        tomatoContainer.appendChild(tomatoImg.cloneNode(true));
+      }
+    } else {
+      for (let index = 0; index < this.tomatoesGrown; index++) {
+        tomatoContainer.appendChild(tomatoImg.cloneNode(true));
+      }
+    }
   }
 
   stop() {

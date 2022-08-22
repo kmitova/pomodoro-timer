@@ -99,6 +99,7 @@ input {
   margin: auto 0;
 }
 
+/* TODO: ADD SEPARATE CLASSES FOR TOMATO AND BASKET IMAGES */
 img {
   width: 5%;
   position: relative;
