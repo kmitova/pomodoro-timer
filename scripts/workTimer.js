@@ -60,10 +60,18 @@ export default class WorkTimer {
       }
       if (this.remainingSeconds === 0) {
         this.stop();
+        this.addTomato();
       }
     }, 1000);
 
     this.updateInterfaceControls();
+  }
+
+  addTomato() {
+    const tomatoNum = document.getElementById("tomatoes-number");
+    let currentTomatoes = Number(tomatoNum.textContent);
+    let updatedTomatoes = currentTomatoes + 1;
+    tomatoNum.textContent = updatedTomatoes;
   }
 
   stop() {
