@@ -43,7 +43,7 @@ export default class WorkTimer {
       this.el.controlBtn.classList.add(".start-timer-clicked");
       this.el.controlBtn.classList.remove(".stop-timer-clicked");
     } else {
-      this.el.controlBtn.textContent = "Reset";
+      this.el.controlBtn.textContent = "Pause";
       this.el.controlBtn.classList.remove(".start-timer-clicked");
       this.el.controlBtn.classList.add(".stop-timer-clicked");
     }
@@ -73,17 +73,18 @@ export default class WorkTimer {
     const tomatoesDiv = document.getElementsByClassName("tomatoes")[0];
     tomatoesDiv.style.display = "block";
     const tomatoNum = document.getElementById("tomatoes-number");
-    let currentTomatoes = Number(tomatoNum.textContent);
-    let updatedTomatoes = currentTomatoes + 1;
-    this.tomatoesGrown = updatedTomatoes;
-    const basket = document.createElement("img");
-    basket.src = "./media/basket-tomatoes/basket.jpg";
-    const tomatoContainer = document.getElementById("tomato-img-container");
-    tomatoContainer.innerHTML = "";
     const tomatoImg = document.createElement("img");
     tomatoImg.src = "./media/tomato.png";
     tomatoImg.classList.add("single-tomato-img");
     basket.classList.add("basket-img");
+    const basket = document.createElement("img");
+    basket.src = "./media/basket-tomatoes/basket.jpg";
+    const tomatoContainer = document.getElementById("tomato-img-container");
+    let currentTomatoes = Number(tomatoNum.textContent);
+    // let updatedTomatoes = currentTomatoes + 1;
+    this.tomatoesGrown = currentTomatoes + 1;
+
+    tomatoContainer.innerHTML = "";
     tomatoNum.textContent = this.tomatoesGrown;
     if (this.tomatoesGrown >= 4) {
       let baskets = Math.floor(updatedTomatoes / 3);

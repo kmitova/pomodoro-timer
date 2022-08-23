@@ -41,7 +41,7 @@ export default class BreakTimer {
       this.el.controlBtn.classList.add(".start-timer-clicked");
       this.el.controlBtn.classList.remove(".stop-timer-clicked");
     } else {
-      this.el.controlBtn.textContent = "Reset";
+      this.el.controlBtn.textContent = "Pause";
       this.el.controlBtn.classList.remove(".start-timer-clicked");
       this.el.controlBtn.classList.add(".stop-timer-clicked");
     }
