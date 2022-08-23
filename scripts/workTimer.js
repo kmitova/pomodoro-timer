@@ -82,10 +82,11 @@ export default class WorkTimer {
     tomatoContainer.innerHTML = "";
     const tomatoImg = document.createElement("img");
     tomatoImg.src = "./media/tomato.png";
+    tomatoImg.classList.add("single-tomato-img");
+    basket.classList.add("basket-img");
     tomatoNum.textContent = this.tomatoesGrown;
     if (this.tomatoesGrown >= 4) {
       let baskets = Math.floor(updatedTomatoes / 3);
-      // let remaining = this.tomatoesGrown - baskets * 3;
       let remaining = this.tomatoesGrown % 3;
       console.log("baskets: " + baskets);
       console.log("remaining " + remaining);

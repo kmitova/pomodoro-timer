@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
 
 body {
   margin: 0;
@@ -21,7 +23,6 @@ main {
 }
 
 .work-container, .break-container {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -60,9 +61,27 @@ h1, h3, h4 {
   text-align: center;
 }
 
+h1 {
+  font-family: 'Paytone One', sans-serif;
+  font-size: 3rem;
+}
+
 .tomatoes {
   display: none;
   /* padding-top: 4em; */
+}
+
+#work-time-title, #break-time-title {
+  border: 2px solid pink;
+  margin: 0;
+  width: 6em;
+  padding: .5em 1em;
+  
+
+}
+
+.work-timer, .break-timer {
+  border: 2px solid purple
 }
 
 
@@ -99,10 +118,19 @@ input {
   margin: auto 0;
 }
 
-/* TODO: ADD SEPARATE CLASSES FOR TOMATO AND BASKET IMAGES */
-img {
+.single-tomato-img {
   width: 5%;
   position: relative;
   bottom: -10px;
   right: -4px;
+}
+
+.basket-img {
+  width: 8%;
+  position: relative;
+  bottom: -12px;
+}
+
+#tomato-img-container {
+  display: block;
 }
