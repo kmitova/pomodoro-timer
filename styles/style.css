@@ -114,12 +114,12 @@ h1 {
 .work-timer, .break-timer {
   padding-top: 1em;
   border: 2px solid purple;
-  background-color: var(--main-red);
+  background-color: var(--accent-color);
+  border-radius: 20px;
 }
 
 button {
   border: none;
-  background-color: none;
   padding: 0.5em;
   border-radius: 5px;
   font-size: 1rem;
@@ -127,17 +127,18 @@ button {
   margin: 1em auto;
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
-
+  background-color: var(--dark-red);
+  color: white;
 }
 
 input {
-  color: red;
+  color: var(--accent-color);
+  background-color: var(--main-red);
   padding: .2em;
   font-size: 4rem;
   width: 1.5em;
   text-align: center;
   border: none;
-  background-color: #dcdbd1;
   border-radius: 15px;
   margin-top: .2em;
   font-family: 'Quicksand', sans-serif;
@@ -145,8 +146,9 @@ input {
 }
 
 .divider {
-  font-size: 3rem;
+  font-size: 6rem;
   text-align: center;
+  color: var(--dark-red);
   margin: auto 0;
 }
 
