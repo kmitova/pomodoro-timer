@@ -19,7 +19,10 @@ body {
 }
 
 /* TODO: display grid, small screen on top bigger screen side to side */
-
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
 /* main {
   display: flex;
   flex-direction: row;
@@ -29,6 +32,8 @@ body {
 
 main {
   margin: 2em;
+  /* display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
 }
 
 .work-container, .break-container {
@@ -56,7 +61,6 @@ label {
 .is-visible {
   width: 100%;
   display: block;
-  flex: 1;
 }
 
 .hidden {
@@ -90,17 +94,20 @@ h1 {
 
 .tomatoes {
   display: none;
+  margin: 1em;
+  border-radius: 15px;
   /* padding-top: 4em; */
 }
 
 #work-time-title, #break-time-title {
-  border: 2px solid pink;
+  border: 2px solid var(--main-red);
   background-color: var(--accent-color);
   margin: 0;
   width: 6em;
   padding: .5em 1em;
   text-align: center;
   border-radius: 5px;
+
 }
 
 #work-time-title:hover,
@@ -114,7 +121,7 @@ h1 {
 
 .work-timer, .break-timer {
   padding-top: 1em;
-  border: 2px solid purple;
+  /* border: 2px solid purple; */
   background-color: var(--accent-color);
   border-radius: 20px;
 }

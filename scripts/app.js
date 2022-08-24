@@ -8,18 +8,10 @@ const breakTimer = document.querySelector(".break-timer");
 
 window.onload = () => {
   loadWorkTimer();
-  workSectionDisplay.classList.remove("inactive");
-  breakSectionDisplay.classList.add("inactive");
 };
 
-workSectionDisplay.addEventListener("click", () => {
-  loadWorkTimer(), workSectionDisplay.classList.remove("inactive");
-  breakSectionDisplay.classList.add("inactive");
-});
-breakSectionDisplay.addEventListener("click", () => {
-  loadBreakTimer(), workSectionDisplay.classList.add("inactive");
-  breakSectionDisplay.classList.remove("inactive");
-});
+workSectionDisplay.addEventListener("click", loadWorkTimer);
+breakSectionDisplay.addEventListener("click", loadBreakTimer);
 
 function loadWorkTimer() {
   new WorkTimer(document.querySelector(".work-timer"));
@@ -27,6 +19,8 @@ function loadWorkTimer() {
   workTimer.classList.add("is-visible");
   breakTimer.classList.remove("is-visible");
   breakTimer.style.display = "none";
+  workSectionDisplay.classList.remove("inactive");
+  breakSectionDisplay.classList.add("inactive");
 }
 
 function loadBreakTimer() {
@@ -35,6 +29,8 @@ function loadBreakTimer() {
   workTimer.style.display = "none";
   breakTimer.classList.add("is-visible");
   workTimer.classList.remove("is-visible");
+  workSectionDisplay.classList.add("inactive");
+  breakSectionDisplay.classList.remove("inactive");
 }
 
 // new WorkTimer(document.querySelector(".work-timer"));

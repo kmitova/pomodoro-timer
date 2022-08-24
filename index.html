@@ -13,18 +13,22 @@
   </head>
   <body>
     <h1>Pomodoro Timer</h1>
+
     <h2>Grow tomatoes while working on your goals!</h2>
-    <div class="tomatoes">
-      <h4>
-        Tomatoes grown in this work session: <span id="tomatoes-number">0</span
-        ><span id="tomato-img-container"></span>
-      </h4>
-    </div>
-    <main class="container">
-      <div class="work-container">
-        <h3 id="work-time-title">Work time</h3>
-        <div class="work-timer">
-          <!-- <div class="set-time">
+    <div class="content">
+      <div class="tomatoes">
+        <h4>
+          Tomatoes grown in this work session:
+          <span id="tomatoes-number">0</span
+          ><span id="tomato-img-container"></span>
+        </h4>
+      </div>
+
+      <main class="container">
+        <div class="work-container">
+          <h3 id="work-time-title">Work time</h3>
+          <div class="work-timer">
+            <!-- <div class="set-time">
             <label for="time">Enter minutes:</label>
             <input type="number" id="inputMinutes" value="25" />
           </div>
@@ -43,14 +47,14 @@
               </button>
             </div>
           </div> -->
+          </div>
         </div>
-      </div>
 
-      <div class="break-container">
-        <h3 id="break-time-title">Break time</h3>
-        <!-- <button id="btn">button</button> -->
-        <div class="break-timer">
-          <!-- <div class="set-time">
+        <div class="break-container">
+          <h3 id="break-time-title">Break time</h3>
+          <!-- <button id="btn">button</button> -->
+          <div class="break-timer">
+            <!-- <div class="set-time">
             <label for="time">Enter minutes:</label>
             <input type="number" id="inputMinutesBreak" value="5" />
           </div>
@@ -69,9 +73,11 @@
               </button>
             </div>
           </div> -->
+          </div>
         </div>
-      </div>
-    </main>
+      </main>
+    </div>
+
     <audio id="countdown-sound">
       <source src="media/10-sec-countdown.mp3" type="audio/mp3" />
     </audio>
