@@ -10,8 +10,14 @@ window.onload = () => {
   loadWorkTimer();
 };
 
-workSectionDisplay.addEventListener("click", loadWorkTimer);
-breakSectionDisplay.addEventListener("click", loadBreakTimer);
+workSectionDisplay.addEventListener("click", () => {
+  loadWorkTimer(), workSectionDisplay.classList.remove("inactive");
+  breakSectionDisplay.classList.add("inactive");
+});
+breakSectionDisplay.addEventListener("click", () => {
+  loadBreakTimer(), workSectionDisplay.classList.add("inactive");
+  breakSectionDisplay.classList.remove("inactive");
+});
 
 function loadWorkTimer() {
   new WorkTimer(document.querySelector(".work-timer"));

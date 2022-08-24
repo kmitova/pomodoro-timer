@@ -76,14 +76,21 @@ h1 {
   margin: 0;
   width: 6em;
   padding: .5em 1em;
-  
+}
 
+#work-time-title:hover,
+#break-time-title:hover {
+  color: blueviolet
+}
+
+.inactive {
+  color: grey;
 }
 
 .work-timer, .break-timer {
+  padding-top: 1em;
   border: 2px solid purple
 }
-
 
 button {
   border: none;
