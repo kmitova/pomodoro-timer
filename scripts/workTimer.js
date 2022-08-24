@@ -76,9 +76,10 @@ export default class WorkTimer {
     const tomatoImg = document.createElement("img");
     tomatoImg.src = "./media/tomato.png";
     tomatoImg.classList.add("single-tomato-img");
-    basket.classList.add("basket-img");
     const basket = document.createElement("img");
     basket.src = "./media/basket-tomatoes/basket.jpg";
+    basket.classList.add("basket-img");
+
     const tomatoContainer = document.getElementById("tomato-img-container");
     let currentTomatoes = Number(tomatoNum.textContent);
     // let updatedTomatoes = currentTomatoes + 1;

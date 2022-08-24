@@ -8,6 +8,8 @@ const breakTimer = document.querySelector(".break-timer");
 
 window.onload = () => {
   loadWorkTimer();
+  workSectionDisplay.classList.remove("inactive");
+  breakSectionDisplay.classList.add("inactive");
 };
 
 workSectionDisplay.addEventListener("click", () => {
