@@ -88,7 +88,7 @@ export default class WorkTimer {
     tomatoContainer.innerHTML = "";
     tomatoNum.textContent = this.tomatoesGrown;
     if (this.tomatoesGrown >= 4) {
-      let baskets = Math.floor(updatedTomatoes / 3);
+      let baskets = Math.floor(this.tomatoesGrown / 3);
       let remaining = this.tomatoesGrown % 3;
       console.log("baskets: " + baskets);
       console.log("remaining " + remaining);

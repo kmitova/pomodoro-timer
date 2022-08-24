@@ -18,6 +18,7 @@ body {
   background-color: var(--body-red);
 }
 
+/* TODO: display grid, small screen on top bigger screen side to side */
 
 /* main {
   display: flex;
@@ -152,18 +153,12 @@ input {
   margin: auto 0;
 }
 
-/* TODO: change width to em or rem from % because images look too small on smaller screen size */
 .single-tomato-img {
-  width: 5%;
-  /* position: relative;
-  bottom: -10px;
-  right: -4px; */
+  width: 1.5em;
 }
 
 .basket-img {
-  width: 8%;
-  /* position: relative;
-  bottom: -12px; */
+  width: 2em;
 }
 
 #tomato-img-container {
