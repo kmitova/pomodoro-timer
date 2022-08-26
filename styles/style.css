@@ -7,9 +7,8 @@
   --dark-red: #d41d00;
   --body-red: #ff8f7d;
   --accent-color: white;
-
-
 }
+
 body {
   margin: 0;
   padding: 0;
@@ -22,17 +21,9 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
 }
-/* main {
-  display: flex;
-  flex-direction: row;
-  gap: 2em;
-  justify-content: center;
-} */
 
 main {
   margin: 2em;
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
 }
 
 .work-container, .break-container {
@@ -40,7 +31,6 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
 
 .spans {
@@ -75,25 +65,16 @@ h1, h2, h4 {
 
 h1, h4 {
   font-family: 'Paytone One', sans-serif;
-  /* font-size: 3rem; */
-  
 }
 
 h1 {
   font-size: 3rem;
 }
 
-/* h2 {
-  background-color: var(--accent-color);
-  color: black;
-  padding: 1em;
-} */
-
 .tomatoes {
   display: none;
   margin: 1em;
   border-radius: 15px;
-  /* padding-top: 4em; */
 }
 
 #work-time-title, #break-time-title {
@@ -118,36 +99,37 @@ h1 {
 
 .work-timer, .break-timer {
   padding-top: 1em;
-  /* border: 2px solid purple; */
   background-color: var(--accent-color);
   border-radius: 20px;
+  background-color: #ff8f7d;
 }
 
 button {
   border: none;
-  padding: 0.5em;
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 1.5rem;
   display: block;
   margin: 1em auto;
   font-family: 'Quicksand', sans-serif;
   font-weight: 700;
-  background-color: var(--dark-red);
+  background-color: var(--main-red);
   color: white;
+  width: 6em;
+  height: 3em;
 }
 
 input {
   color: var(--accent-color);
   background-color: var(--main-red);
   padding: .2em;
-  font-size: 4rem;
-  width: 1.5em;
+  font-size: 5rem;
+  width: 2em;
+  height: 2em;
   text-align: center;
   border: none;
   border-radius: 15px;
   margin-top: .2em;
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 700;
+  font-family: 'Paytone One', sans-serif;
 }
 
 .divider {
@@ -171,6 +153,7 @@ input {
 
 label {
   font-weight: 700;
+  color: var(--accent-color);
 }
 
 .tomatoes {
