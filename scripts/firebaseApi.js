@@ -9,6 +9,7 @@ const firebaseApp = firebase.initializeApp({
 
 const db = firebaseApp.firestore();
 const auth = firebaseApp.auth();
+let user = false;
 
 function logIn() {
   const email = document.getElementById("email").value;
@@ -17,8 +18,13 @@ function logIn() {
     .signInWithEmailAndPassword(email, password)
     .then((resolve) => {
       console.log(resolve.user);
+      user = true;
+      if (user) {
+        alert("Hello, lets get to work!");
+      }
     })
     .catch((error) => {
+      user = false;
       alert("Incorrect email or password.");
       console.log(error.code);
       console.log(error.message);
@@ -33,14 +39,23 @@ function register() {
     .createUserWithEmailAndPassword(email, password)
     .then((resolve) => {
       console.log(resolve.user);
+      user = true;
+      greetUser();
     })
     .catch((error) => {
+      user = false;
       alert(
         "Email already in use. If you already have a profile, you can sign in."
       );
       console.log(error.code);
       console.log(error.message);
     });
+}
+
+function greetUser(user) {
+  if (user) {
+    alert("Hello, lets get to work!");
+  }
 }
 
 export { logIn, register };
