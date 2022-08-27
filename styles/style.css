@@ -16,13 +16,30 @@ body {
   font-family: 'Quicksand', sans-serif;
   background-color: var(--body-red);
 }
+
+.profile {
+  background-color: #adc178;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 4em;
+  border-radius: 20px;
+}
+
+#prompt-p {
+  color: #432818;
+}
+
+#sign-up-btn, #log-in-btn {
+  font-size: .7rem;
+}
+
 .input {
   background-color: white;
-  width: 8rem;
-  /* height: 1rem; */
+  width: 10rem;
   font-size: 1rem;
-  color: black
-
+  color: black;
 }
 .content {
   display: grid;
