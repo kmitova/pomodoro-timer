@@ -1,10 +1,16 @@
 import WorkTimer from "./workTimer.js";
 import BreakTimer from "./breakTimer.js";
-
+import { logIn, register } from "./firebaseAPI.js";
 const workSectionDisplay = document.getElementById("work-time-title");
 const breakSectionDisplay = document.getElementById("break-time-title");
 const workTimer = document.querySelector(".work-timer");
 const breakTimer = document.querySelector(".break-timer");
+
+const registerBtn = document.getElementById("sign-up-btn");
+const logInBtn = document.getElementById("log-in-btn");
+
+registerBtn.addEventListener("click", register);
+logInBtn.addEventListener("click", logIn);
 
 window.onload = () => {
   loadWorkTimer();
