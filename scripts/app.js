@@ -12,30 +12,35 @@ const logInBtn = document.getElementById("log-in-btn");
 const promptBtn = document.getElementById("prompt-btn");
 const closePromptBtn = document.getElementById("close prompt");
 
+window.onload = () => {
+  loadWorkTimer();
+};
+
 closePromptBtn.addEventListener("click", hideModal);
 promptBtn.addEventListener("click", displayProfileSection);
+
+registerBtn.addEventListener("click", () => {
+  register(), hideModal(), hidePrompt();
+});
+
+logInBtn.addEventListener("click", () => {
+  logIn(), hideModal(), hidePrompt();
+});
+
+workSectionDisplay.addEventListener("click", loadWorkTimer);
+breakSectionDisplay.addEventListener("click", loadBreakTimer);
 
 function displayProfileSection() {
   document.querySelector(".modal").style.display = "block";
 }
-registerBtn.addEventListener("click", () => {
-  register(), hideModal();
-});
-
-logInBtn.addEventListener("click", () => {
-  logIn(), hideModal();
-});
 
 function hideModal() {
   document.querySelector(".modal").style.display = "none";
 }
 
-window.onload = () => {
-  loadWorkTimer();
-};
-
-workSectionDisplay.addEventListener("click", loadWorkTimer);
-breakSectionDisplay.addEventListener("click", loadBreakTimer);
+function hidePrompt() {
+  document.querySelector(".prompt-btns").style.display = "none";
+}
 
 function loadWorkTimer() {
   new WorkTimer(document.querySelector(".work-timer"));

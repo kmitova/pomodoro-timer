@@ -19,9 +19,8 @@ function logIn() {
     .then((resolve) => {
       console.log(resolve.user);
       user = true;
-      if (user) {
-        alert("Hello, lets get to work!");
-      }
+      // greetUser();
+      userInfoDisplay(email);
     })
     .catch((error) => {
       user = false;
@@ -40,6 +39,7 @@ function register() {
     .then((resolve) => {
       console.log(resolve.user);
       user = true;
+      userInfoDisplay(email);
       greetUser();
     })
     .catch((error) => {
@@ -56,6 +56,14 @@ function greetUser(user) {
   if (user) {
     alert("Hello, lets get to work!");
   }
+}
+
+function userInfoDisplay(email) {
+  const userDiv = document.createElement("div");
+  const header = document.getElementById("header");
+  const userP = document.getElementById("greet-p");
+  header.appendChild(userDiv);
+  userP.textContent = "Hello, " + email + "!";
 }
 
 export { logIn, register };
