@@ -1,8 +1,3 @@
-1. if one (work or break) is clicked, the other is not visible
-
-2. before minutes are entered, visibility of timer is none
-
-3. when minutes are entered, and the mouse is moved away from the input field, the minutes are automatically set in the timer span
-
-OUTLINE:
-1.work timer first
+- move log in sign up btn above the h1 tag
+- if a user has signed up or registered, show div with a greeting~: hello, email (of user)
+- and if there is a uswer, hide the login or sign up btn
