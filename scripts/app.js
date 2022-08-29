@@ -9,8 +9,26 @@ const breakTimer = document.querySelector(".break-timer");
 const registerBtn = document.getElementById("sign-up-btn");
 const logInBtn = document.getElementById("log-in-btn");
 
-registerBtn.addEventListener("click", register);
-logInBtn.addEventListener("click", logIn);
+const promptBtn = document.getElementById("prompt-btn");
+const closePromptBtn = document.getElementById("close prompt");
+
+closePromptBtn.addEventListener("click", hideModal);
+promptBtn.addEventListener("click", displayProfileSection);
+
+function displayProfileSection() {
+  document.querySelector(".modal").style.display = "block";
+}
+registerBtn.addEventListener("click", () => {
+  register(), hideModal();
+});
+
+logInBtn.addEventListener("click", () => {
+  logIn(), hideModal();
+});
+
+function hideModal() {
+  document.querySelector(".modal").style.display = "none";
+}
 
 window.onload = () => {
   loadWorkTimer();

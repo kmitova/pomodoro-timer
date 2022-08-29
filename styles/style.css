@@ -27,6 +27,16 @@ body {
   border-radius: 20px;
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
 #prompt-p {
   color: #432818;
 }

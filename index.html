@@ -15,30 +15,37 @@
     <h1>Pomodoro Timer</h1>
 
     <h2>Grow tomatoes while working on your goals!</h2>
-    <div class="profile">
-      <p id="prompt-p">Do you want to sign up or log in?</p>
-      <div class="inputs">
-        <input
-          class="input"
-          type="email"
-          name="email"
-          placeholder="email"
-          id="email"
-        />
-        <input
-          class="input"
-          type="password"
-          name="password"
-          placeholder="password"
-          id="password"
-        />
-      </div>
+    <div class="prompt-btns">
+      <button id="prompt-btn">Log In or Sign Up</button>
+    </div>
+    <div class="modal">
+      <div class="profile">
+        <p id="prompt-p">Do you want to sign up or log in?</p>
+        <button id="close prompt">Close</button>
+        <div class="inputs">
+          <input
+            class="input"
+            type="email"
+            name="email"
+            placeholder="email"
+            id="email"
+          />
+          <input
+            class="input"
+            type="password"
+            name="password"
+            placeholder="password"
+            id="password"
+          />
+        </div>
 
-      <div class="profile-buttons">
-        <button id="sign-up-btn">Sign Up</button>
-        <button id="log-in-btn">Log In</button>
+        <div class="profile-buttons">
+          <button id="sign-up-btn">Sign Up</button>
+          <button id="log-in-btn">Log In</button>
+        </div>
       </div>
     </div>
+
     <div class="content">
       <div class="tomatoes">
         <h4>
