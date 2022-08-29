@@ -1,3 +1,0 @@
-- move log in sign up btn above the h1 tag
-- if a user has signed up or registered, show div with a greeting~: hello, email (of user)
-- and if there is a uswer, hide the login or sign up btn
