@@ -200,3 +200,22 @@ label {
   font-size: 2rem;
   color: var(--dark-red);
 }
+
+
+#prompt-btn {
+  font-size: 1rem;
+  width: 11em;
+}
+
+#greet-p {
+  color: white;
+  font-size: 1.4rem;
+}
+
+#header {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  gap: 2em;
+  padding-right: 1em;
+}
