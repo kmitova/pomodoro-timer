@@ -1,6 +1,7 @@
 import WorkTimer from "./workTimer.js";
 import BreakTimer from "./breakTimer.js";
-import { logIn, register } from "./firebaseAPI.js";
+import { logIn, register, db } from "./firebaseAPI.js";
+// import { collection, getDocs } from "firebase/firestore";
 
 // VARIABLES
 const workSectionDisplay = document.getElementById("work-time-title");
@@ -13,6 +14,21 @@ const logInBtn = document.getElementById("log-in-btn");
 
 const promptBtn = document.getElementById("prompt-btn");
 const closePromptBtn = document.getElementById("close prompt");
+
+//GET USERS FUNCTION
+
+const getUsers = async () => {
+  const usersCollectionReference = db.collection("users");
+  const response = await usersCollectionReference
+    .get()
+    .then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        console.log(doc);
+      });
+    });
+};
+
+getUsers();
 
 // EVENTS
 window.onload = () => {

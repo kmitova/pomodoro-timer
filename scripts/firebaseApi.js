@@ -19,7 +19,6 @@ function logIn() {
     .then((resolve) => {
       console.log(resolve.user);
       user = true;
-      // greetUser();
       userInfoDisplay(email);
     })
     .catch((error) => {
@@ -52,12 +51,6 @@ function register() {
     });
 }
 
-function greetUser(user) {
-  if (user) {
-    alert("Hello, lets get to work!");
-  }
-}
-
 function userInfoDisplay(email) {
   const userDiv = document.createElement("div");
   const header = document.getElementById("header");
@@ -66,4 +59,4 @@ function userInfoDisplay(email) {
   userP.textContent = "Hello, " + email + "!";
 }
 
-export { logIn, register };
+export { logIn, register, db };
