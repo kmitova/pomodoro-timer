@@ -17,18 +17,18 @@ const closePromptBtn = document.getElementById("close prompt");
 
 //GET USERS FUNCTION
 
-const getUsers = async () => {
-  const usersCollectionReference = db.collection("users");
-  const response = await usersCollectionReference
-    .get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        console.log(doc);
-      });
-    });
-};
+// const getUsers = async () => {
+//   const usersCollectionReference = db.collection("users");
+//   const response = await usersCollectionReference
+//     .get()
+//     .then((querySnapshot) => {
+//       querySnapshot.forEach((doc) => {
+//         console.log(doc);
+//       });
+//     });
+// };
 
-getUsers();
+// getUsers();
 
 // EVENTS
 window.onload = () => {
