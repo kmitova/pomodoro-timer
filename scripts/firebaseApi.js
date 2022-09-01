@@ -1,10 +1,10 @@
 // import { initializeApp } from "firebase/app";
 // import { getFirestore } from "firebase/firestore";
 
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+// import { getFirestore } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-firestore.js";
 
-const firebaseApp = initializeApp({
+const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyDMuNJEJBmVOfryz4rAvH916No2yhxuGQk",
   authDomain: "pomodoro-b8172.firebaseapp.com",
   projectId: "pomodoro-b8172",
@@ -13,8 +13,8 @@ const firebaseApp = initializeApp({
   appId: "1:741404649733:web:db7c469c0d058f1288ef6c",
 });
 
-// const db = firebaseApp.firestore();
-const db = getFirestore();
+const db = firebaseApp.firestore();
+// const db = getFirestore();
 const auth = firebase.auth();
 let user = false;
 
