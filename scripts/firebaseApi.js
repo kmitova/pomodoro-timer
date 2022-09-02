@@ -24,7 +24,6 @@ function logIn() {
   auth
     .signInWithEmailAndPassword(email, password)
     .then((resolve) => {
-      console.log(resolve.user);
       user = true;
       userInfoDisplay(email);
     })
@@ -43,7 +42,6 @@ function register() {
   auth
     .createUserWithEmailAndPassword(email, password)
     .then((resolve) => {
-      console.log(resolve.user);
       user = true;
       userInfoDisplay(email);
       greetUser();

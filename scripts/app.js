@@ -2,6 +2,8 @@ import WorkTimer from "./workTimer.js";
 import BreakTimer from "./breakTimer.js";
 import { logIn, register, db } from "./firebaseAPI.js";
 // import { collection, getDocs } from "firebase/firestore";
+// require("dotenv").config();
+// console.log(process.env);
 
 // VARIABLES
 const workSectionDisplay = document.getElementById("work-time-title");
